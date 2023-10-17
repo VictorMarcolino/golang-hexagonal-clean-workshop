@@ -40,3 +40,7 @@ pre-commit: gofmt govet tests
 
 .PHONY: pre-push
 pre-push: gotidy pre-commit
+
+.PHONY: build-plantuml
+build-plantuml:
+	plantuml -o ./.github/out-plantuml -t svg README.md
