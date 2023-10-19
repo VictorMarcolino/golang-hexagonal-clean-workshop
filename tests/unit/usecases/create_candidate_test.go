@@ -1,4 +1,4 @@
-package unit_test
+package usecases_test
 
 import (
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/tests/specs"
@@ -13,6 +13,6 @@ func TestSuit(t *testing.T) {
 	RunSpecs(t, "TestSuit:TestSuit")
 }
 
-var _ = Describe("Describe", func() {
-	specs.ExampleSpec()
+var _ = Describe("CreateCandidateUsecase", func() {
+	specs.CreateCandidateUsecase(nil)
 })
