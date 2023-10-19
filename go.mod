@@ -3,8 +3,10 @@ module github.com/VictorMarcolino/golang-hexagonal-clean-workshop
 go 1.19
 
 require (
+	github.com/VictorMarcolino/artifact-manipulator v0.0.0-20231023142255-bac941c0e747
+	github.com/google/uuid v1.3.1
 	github.com/onsi/ginkgo/v2 v2.13.0
-	github.com/onsi/gomega v1.28.0
+	github.com/onsi/gomega v1.28.1
 )
 
 require (
