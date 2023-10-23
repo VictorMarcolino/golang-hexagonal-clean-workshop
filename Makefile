@@ -44,3 +44,11 @@ pre-push: gotidy pre-commit
 .PHONY: build-plantuml
 build-plantuml:
 	plantuml -o ./.github/out-plantuml -t svg README.md
+
+.PHONY: swagger
+swagger:
+	@swag init -g cmd/ginkgo/main.go -d ./ --output cmd/ginkgo/docs
+
+.PHONY: run-gin
+run-gin: swagger
+	go run cmd/ginkgo/main.go
