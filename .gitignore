@@ -1,6 +1,6 @@
 docs/swagger.*
 docs/docs.go
-
+tmp
 # Created by https://www.toptal.com/developers/gitignore/api/jetbrains+all,visualstudiocode,go,python,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=jetbrains+all,visualstudiocode,go,python,node
 
