@@ -1,13 +1,14 @@
 package main
 
 import (
+	"log"
+
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/cmd/ginkgo/docs"
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/cmd/ginkgo/middleware"
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/adapters"
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/controllers"
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/core/usecases"
 	"github.com/gin-gonic/gin"
-	"log"
 )
 
 // @title Voting API
@@ -36,5 +37,4 @@ func main() {
 	HOST := "0.0.0.0:8080"
 	log.Printf("Swagger at: %v/api/v1/swagger/index.html", HOST)
 	log.Fatal(ginEngine.Run(HOST))
-
 }

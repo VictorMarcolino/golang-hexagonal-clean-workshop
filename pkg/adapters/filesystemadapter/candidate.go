@@ -3,19 +3,23 @@ package filesystemadapter
 import (
 	"encoding/json"
 	"fmt"
+	"strings"
+
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/core/domain"
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/core/domainerrors"
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/core/ports"
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/utils"
-	"strings"
 )
 
-var _ ports.CreateCandidateI = &FilesystemAdapter{}
-var _ ports.GetCandidateI = &FilesystemAdapter{}
+var (
+	_ ports.CreateCandidateI = &FilesystemAdapter{}
+	_ ports.GetCandidateI    = &FilesystemAdapter{}
+)
 
 func getFsUuidForCandidate(uuid string) string {
 	return fmt.Sprintf("candidate/%v.json", uuid)
 }
+
 func (i *FilesystemAdapter) CreateCandidate(candidate domain.Candidate) (string, error) {
 	i.mu.Lock()
 	defer i.mu.Unlock()

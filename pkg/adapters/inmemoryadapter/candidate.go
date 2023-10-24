@@ -7,8 +7,10 @@ import (
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/utils"
 )
 
-var _ ports.CreateCandidateI = &InMemory{}
-var _ ports.GetCandidateI = &InMemory{}
+var (
+	_ ports.CreateCandidateI = &InMemory{}
+	_ ports.GetCandidateI    = &InMemory{}
+)
 
 func (i *InMemory) CreateCandidate(candidate domain.Candidate) (string, error) {
 	i.mu.Lock()

@@ -2,6 +2,7 @@ package specs
 
 import (
 	"errors"
+
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/core/domain"
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/core/domainerrors"
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/core/ports"

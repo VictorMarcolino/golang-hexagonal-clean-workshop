@@ -7,8 +7,10 @@ import (
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/utils"
 )
 
-var _ ports.GetVotingSessionI = &InMemory{}
-var _ ports.CreateVotingI = &InMemory{}
+var (
+	_ ports.GetVotingSessionI = &InMemory{}
+	_ ports.CreateVotingI     = &InMemory{}
+)
 
 func (i *InMemory) CreateVoting(voting domain.Voting) (string, error) {
 	i.mu.Lock()

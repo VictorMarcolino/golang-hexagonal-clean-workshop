@@ -51,7 +51,6 @@ func CountVotesUsecase(useCases CountVotesUsecaseTestRequiresUseCases, adapters 
 				VotingUUID:    votingSession.UUID,
 				CandidateUuid: candidate2.UUID,
 			})
-
 		})
 
 		It("Expect usecase to not raise an error", func() {

@@ -2,6 +2,7 @@ package vote_on_candidate_usecase
 
 import (
 	"errors"
+
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/core/domain"
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/core/ports"
 )

@@ -1,10 +1,11 @@
 package filesystemadapter
 
 import (
+	"sync"
+
 	artifactmanager "github.com/VictorMarcolino/artifact-manipulator/pkg/adapters"
 	"github.com/VictorMarcolino/artifact-manipulator/pkg/core/ports"
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/utils"
-	"sync"
 )
 
 type FilesystemAdapter struct {

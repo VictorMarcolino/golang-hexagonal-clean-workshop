@@ -3,14 +3,17 @@ package filesystemadapter
 import (
 	"encoding/json"
 	"fmt"
+	"strings"
+
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/core/domain"
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/core/ports"
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/utils"
-	"strings"
 )
 
-var _ ports.GetVotesI = &FilesystemAdapter{}
-var _ ports.CreateVoteI = &FilesystemAdapter{}
+var (
+	_ ports.GetVotesI   = &FilesystemAdapter{}
+	_ ports.CreateVoteI = &FilesystemAdapter{}
+)
 
 func getFsUuidForVote(uuid string) string {
 	return fmt.Sprintf("vote/%v.json", uuid)
@@ -25,6 +28,7 @@ func filterVotesString(list []string) []string {
 	}
 	return votesList
 }
+
 func (i *FilesystemAdapter) GetVotes(votingUUID string) ([]domain.Vote, error) {
 	i.mu.RLock()
 	defer i.mu.RUnlock()

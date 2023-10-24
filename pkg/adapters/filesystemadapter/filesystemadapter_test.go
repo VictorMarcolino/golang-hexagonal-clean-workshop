@@ -1,11 +1,12 @@
 package filesystemadapter_test
 
 import (
+	"testing"
+
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/adapters/filesystemadapter"
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/tests/specs"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
-	"testing"
 )
 
 func TestSuit(t *testing.T) {

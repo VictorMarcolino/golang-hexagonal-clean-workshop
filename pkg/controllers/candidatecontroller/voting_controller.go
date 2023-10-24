@@ -17,6 +17,7 @@ func NewCandidateController(
 		createCandidate,
 	}
 }
+
 func (p *CandidateController) RegisterRoutes(router gin.IRouter) {
 	candidate := router.Group("candidate")
 	candidate.POST("", p.createCandidateUsecaseHandler)

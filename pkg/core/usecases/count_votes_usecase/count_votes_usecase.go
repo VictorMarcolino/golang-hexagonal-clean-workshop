@@ -2,6 +2,7 @@ package count_votes_usecase
 
 import (
 	"errors"
+
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/core/ports"
 )
 

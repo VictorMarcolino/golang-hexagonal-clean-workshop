@@ -5,5 +5,7 @@ import (
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/controllers/votingcontroller"
 )
 
-var NewVotingController = votingcontroller.NewVotingController
-var NewCandidateController = candidatecontroller.NewCandidateController
+var (
+	NewVotingController    = votingcontroller.NewVotingController
+	NewCandidateController = candidatecontroller.NewCandidateController
+)

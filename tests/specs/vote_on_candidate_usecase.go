@@ -66,7 +66,6 @@ func VoteOnCandidateUsecase(useCases VoteOnCandidateUsecaseTestRequiresUseCases,
 				Expect(err).ToNot(HaveOccurred())
 				Expect(len(afterVoteCount)).To(BeNumerically(">", len(beforeVoteCount)))
 			})
-
 		})
 
 		When("Given Candidate is NOT part of the voting", func() {

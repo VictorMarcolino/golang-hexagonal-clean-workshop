@@ -5,5 +5,7 @@ import (
 	"github.com/VictorMarcolino/golang-hexagonal-clean-workshop/pkg/adapters/inmemoryadapter"
 )
 
-var NewInMemoryAdapter = inmemoryadapter.NewInMemoryAdapter
-var NewFileSystemAdapter = filesystemadapter.NewFileSystemAdapter
+var (
+	NewInMemoryAdapter   = inmemoryadapter.NewInMemoryAdapter
+	NewFileSystemAdapter = filesystemadapter.NewFileSystemAdapter
+)

@@ -20,9 +20,7 @@ type CreateVotingUsecaseTestRequiresPorts interface {
 
 func CreateVotingUsecase(useCases CreateVotingUsecaseTestRequiresUseCases, adapters CreateVotingUsecaseTestRequiresPorts) {
 	When("Given 2 candidates exist", func() {
-		var (
-			candidates []domain.Candidate
-		)
+		var candidates []domain.Candidate
 		BeforeEach(func() {
 			var err error
 			candidate1 := domain.Candidate{UUID: utils.GenerateUUID(), Name: "Joao"}
